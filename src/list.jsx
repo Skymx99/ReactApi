@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Card from './card';
+import 'isomorphic-fetch';
+import 'es6-promise';
 
 
 
@@ -9,7 +11,7 @@ class List extends Component {
         super()
         this.state = {
             films: [],
-            hasLoaded: false,
+
         }
     }
 
@@ -20,7 +22,7 @@ class List extends Component {
             })
             .then((data) => {
                 this.setState({
-                    films: [...data]
+                    films: data
                 });
             });
     }

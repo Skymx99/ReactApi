@@ -8,7 +8,7 @@ class PeopleCard extends Component {
         super(props)
         this.styles = {
             width: '895px',
-            margin: '5px',
+            margin: '2px',
             float: 'left',
 
         };

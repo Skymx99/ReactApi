@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PeopleCard from './peopleCard';
-
+import 'isomorphic-fetch';
+import 'es6-promise';
 
 
 class People extends Component {
@@ -9,7 +10,7 @@ class People extends Component {
         super()
         this.state = {
             people: [],
-            hasLoaded: false,
+
         }
     }
 
@@ -26,13 +27,6 @@ class People extends Component {
     }
 
 
-
-
-    // hasLoaded() {
-    //     this.setState({
-    //         hasLoaded: !this.state.hasLoaded
-    //     });
-    // }
 
     render() {
 

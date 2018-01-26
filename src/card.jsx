@@ -7,7 +7,7 @@ class Card extends Component {
     constructor(props) {
         super(props)
         this.styles = {
-            margin: '5px',
+            margin: '2px',
             float: 'left',
         };
 
