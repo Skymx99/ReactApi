@@ -28,23 +28,17 @@ class People extends Component {
 
 
 
-    hasLoaded() {
-        this.setState({
-            hasLoaded: !this.state.hasLoaded
-        });
-    }
+    // hasLoaded() {
+    //     this.setState({
+    //         hasLoaded: !this.state.hasLoaded
+    //     });
+    // }
 
     render() {
-        if (this.state.hasLoaded === true) {
+
             return (
                 <div className="container">
-                    <div className="container-head">
 
-                        <button
-                            className="btn btn-primary btn-lg btn-block mt-3"
-                            onClick={() => this.hasLoaded()}
-                        >Show People</button>
-                    </div>
                     <div className="row">
                         {this.state.people.map((person, index) => {
                             return (
@@ -58,18 +52,8 @@ class People extends Component {
             );
         }
 
-        else {
-            return (
-                <div className="container">
 
-                    <button
-                        className="btn btn-primary btn-lg btn-block mt-3"
-                        onClick={() => this.hasLoaded()}
-                    >Show People</button>
-                </div>
-            );
-        }
-    };
+
 
 }
 

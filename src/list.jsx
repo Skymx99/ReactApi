@@ -28,23 +28,13 @@ class List extends Component {
 
 
 
-    hasLoaded() {
-        this.setState({
-            hasLoaded: !this.state.hasLoaded
-        });
-    }
+
 
     render() {
-        if (this.state.hasLoaded === true) {
+
             return (
                 <div className="container">
-                    <div className="container-head">
 
-                        <button
-                            className="btn btn-primary btn-lg btn-block"
-                            onClick={() => this.hasLoaded()}
-                        >Show Films</button>
-                    </div>
                     <div className="row">
                         {this.state.films.map((film, index) => {
                             return (
@@ -58,20 +48,7 @@ class List extends Component {
             );
         }
 
-        else {
-            return (
-                <div className="container">
-
-                    <button
-                        className="btn btn-primary btn-lg btn-block"
-                        onClick={() => this.hasLoaded()}
-                    >Show Films</button>
-                </div>
-            );
-        }
-    };
-
-}
+    }
 
 
 
