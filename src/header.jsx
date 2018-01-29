@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import 'isomorphic-fetch';
 import 'es6-promise';
 import logo from './logo.png';
+import styles from './header.css';
 
 class Header extends Component {
 
@@ -11,18 +12,20 @@ class Header extends Component {
         return (
 
             <Fragment>
-                <div className="container">
+                <div className="header">
                     <img src={logo} alt="logo" />
                 </div>
-                <Link
-                    className="btn large btn-primary btn-lg btn-block"
-                    to="/">Home</Link>
-                <Link
-                    className="btn large btn-primary btn-lg btn-block"
-                    to="/films">Films</Link>
-                <Link
-                    className="btn large btn-primary btn-lg btn-block"
-                    to="/people">People</Link>
+                <ul className="nav justify-content-center" style={styles.header}>
+                    <li className="nav-item">
+                        <Link className="nav-link active" to="/">Home</Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link className="nav-link active" to="/films">Films</Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link className="nav-link active" to="/people">People</Link>
+                    </li>
+                </ul>
             </Fragment>
 
 
@@ -32,3 +35,4 @@ class Header extends Component {
 }
 
 export default Header;
+
